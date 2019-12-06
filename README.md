@@ -1,6 +1,6 @@
-# Lazzurs Tfenv
+# Lazzurs Terragrunt
 
-This is a Homebrew Tap to allow tfenv to be used with Terragrunt.
+This is a Homebrew Tap to allow tfenv or terraform to be used with Terragrunt.
 
 The default Homebrew Terragrunt package depends on Terraform and the current Homebrew policy is not to allow packages in core to have optional dependencies.
 
@@ -10,14 +10,12 @@ First off if you have tfenv or Terragrunt already installed then please uninstal
 
 ### Homebrew CLI
 
-`brew install lazzurs/tfenv/tfenv`
 `brew install lazzurs/tfenv/terragrunt --without-terraform --with-tfenv`
 
 ### Bundle
 
 ```
-tap 'lazzurs/tfenv' || true
-brew 'lazzurs/tfenv/tfenv'
+tap 'lazzurs/terragrunt' || true
 brew 'lazzurs/tfenv/terragrunt', args: ["without-terraform", "with-tfenv"]
 ```
 
