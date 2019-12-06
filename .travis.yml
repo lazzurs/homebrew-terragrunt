@@ -1,4 +1,5 @@
 os: osx
+osx_image: xcode11.2
 env:
   global:
     - HOMEBREW_TAP_DIR="/usr/local/Homebrew/Library/Taps/lazzurs/homebrew-tfenv"
