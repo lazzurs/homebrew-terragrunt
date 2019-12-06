@@ -1,5 +1,7 @@
 # Lazzurs Terragrunt
 
+[![Build Status](https://travis-ci.org/lazzurs/homebrew-terragrunt.svg?branch=master)](https://travis-ci.org/lazzurs/homebrew-terragrunt)
+
 This is a Homebrew Tap to allow tfenv or terraform to be used with Terragrunt.
 
 The default Homebrew Terragrunt package depends on Terraform and the current Homebrew policy is not to allow packages in core to have optional dependencies.
