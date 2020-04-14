@@ -4,18 +4,12 @@ class Terragrunt < Formula
   url "https://github.com/gruntwork-io/terragrunt.git",
     :tag      => "v0.23.8"
 
-  depends_on "dep" => :build
   depends_on "go" => :build
   depends_on "terraform" => :recommended
   depends_on "tfenv" => :optional
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/gruntwork-io/terragrunt").install buildpath.children
-    cd "src/github.com/gruntwork-io/terragrunt" do
-      system "dep", "ensure", "-vendor-only"
-      system "go", "build", "-o", bin/"terragrunt", "-ldflags", "-X main.VERSION=v#{version}"
-    end
+    system "go", "build", "-ldflags", "-X main.VERSION=v#{version}", *std_go_args
   end
 
   test do
